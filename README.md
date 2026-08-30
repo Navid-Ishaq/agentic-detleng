@@ -1,75 +1,37 @@
 # DeTLeng Agentic Systems Lab
 
-Live site: `https://agentic.detleng.com/`
+Custom-domain static repository for `https://agentic.detleng.com/`.
 
-## Purpose
+## Public architecture
 
-This repository is the public implementation surface for DeTLeng Agentic Systems Lab. The Lab does **not** create one page per lecture. Technical inputs are evaluated as `BUILD NOW`, `MERGE`, or `REFERENCE`, then transformed into original working implementations and reusable capability.
+The Lab is business-first: visitors operate a useful system first and open technical anatomy second. Technical postmortems contribute reusable capability; they do not become lecture pages automatically.
 
-Core method:
+### Live System 01 — Service Request Intelligence
+Route: `/foundations/model-behaviour/`
 
-`DISSECT → BUILD → BREAK → COMPARE → TRANSFORM → DEPLOY`
+Public use: understand, route and prepare a controlled response to a service request.
 
-Public design rule:
+Technical anatomy: Predict vs Generate, route scores, confidence gates and generation behaviour.
+
+### Live System 02 — Natural Language Operations Gateway
+Route: `/nlp/text-to-structure/`
+
+Public use: turn human business instructions into validated action objects and proposed tool arguments before execution.
+
+Technical anatomy: tokenization, spans, normalization, POS, entities and language-to-structure inspection.
+
+## Lab principle
 
 **Use the system first. Inspect how it worked second.**
 
-## Current structure
+The site follows the implementation rhythm:
 
-```text
-agentic-detleng/
-├── index.html                         # Agentic Systems Lab Hub
-├── labs.js                            # Central registry for live labs
-├── foundations/
-│   └── model-behaviour/
-│       └── index.html                 # Predict vs Generate (MERGE)
-├── nlp/
-│   └── text-to-structure/
-│       └── index.html                 # Natural Language Operations Gateway (BUILD NOW)
-├── CNAME
-└── README.md
-```
+`DISSECT → BUILD → BREAK → COMPARE → TRANSFORM → DEPLOY`
 
-## Live labs
+## Current files
 
-### 01 — Foundations / Model Behaviour
-
-**Predict vs Generate**  
-Decision: `MERGE`  
-Capability: Decision + Generation Architecture
-
-Route: `/foundations/model-behaviour/`
-
-Reusable primitives include:
-
-- `ClassScoreInspector`
-- `ConfidenceGate`
-- `GenerationTrace`
-- `ExecutionTimeline`
-
-### 02 — Language & Structure
-
-**Text → Structure / Natural Language Operations Gateway**  
-Decision: `BUILD NOW`  
-Capability: Language → Structured Action Architecture
-
-Route: `/nlp/text-to-structure/`
-
-Reusable primitives include:
-
-- `TokenViewer`
-- `SpanHighlighter`
-- `StructuredOutputViewer`
-- `PipelineTrace`
-- `ConfidenceInspector`
-- `SchemaValidator`
-
-## Browser-safe V1 policy
-
-The current labs are designed to run as static GitHub Pages content. Transparent browser-side demonstration engines are explicitly labelled as lab engines. They must not be presented as production model probabilities or hidden AI inference.
-
-Never expose secret provider API keys in public HTML. A future real-model implementation should use a secure server-side or serverless endpoint and preserve the same inspectable interface.
-
-## Growth rule
-
-New inputs should add pages only when technical value justifies them. Prefer shared inspectors, validators, traces and system primitives over one-off lecture pages.
+- `index.html` — Agentic Systems Lab hub
+- `labs.js` — central live-system registry
+- `foundations/model-behaviour/index.html` — Service Request Intelligence
+- `nlp/text-to-structure/index.html` — Natural Language Operations Gateway
+- `CNAME` — custom domain

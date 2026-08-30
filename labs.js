@@ -4,12 +4,12 @@ window.DETLENG_LABS = [
     order: 1,
     category: "Foundations",
     title: "Predict vs Generate",
-    publicTitle: "Service Request Intelligence Anatomy",
+    publicTitle: "Service Request Intelligence",
     route: "foundations/model-behaviour/",
     decision: "MERGE",
     status: "LIVE",
     accent: "lime",
-    purpose: "Inspect how one request can require bounded decisions, confidence gates and generative output inside the same workflow.",
+    purpose: "Understand, route and prepare a controlled response to a customer request. Open the anatomy only when you want to inspect prediction, confidence and generation mechanics.",
     capability: "Decision + Generation Architecture",
     reusable: ["ClassScoreInspector", "ConfidenceGate", "GenerationTrace", "ExecutionTimeline"]
   },
@@ -23,7 +23,7 @@ window.DETLENG_LABS = [
     decision: "BUILD NOW",
     status: "LIVE",
     accent: "cyan",
-    purpose: "Turn human instructions into inspectable, validated machine-ready structure before any tool or business action is allowed.",
+    purpose: "Turn normal business instructions into validated action objects and proposed tool arguments before any real workflow is allowed to execute.",
     capability: "Language → Structured Action Architecture",
     reusable: ["TokenViewer", "SpanHighlighter", "StructuredOutputViewer", "PipelineTrace", "SchemaValidator"]
   }
